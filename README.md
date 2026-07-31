@@ -1,4 +1,4 @@
-# 📝 Amazon Review Sentiment Analysis
+## ReviewSense | NLP-Based Amazon Review Rating Prediction
 
 A Machine Learning and Natural Language Processing (NLP) project that analyzes Amazon product reviews and predicts review ratings (1–5 stars) based on textual content. The project applies text preprocessing, TF-IDF feature extraction, and multiple classification algorithms to evaluate sentiment prediction performance.
 
