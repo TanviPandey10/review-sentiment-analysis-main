@@ -1,64 +1,118 @@
- 📝 Review Sentiment Analysis
-This project focuses on analyzing and classifying Amazon product reviews.
-The goal is to preprocess the text data, extract meaningful features using NLP, and build machine learning models to predict review scores.
+# 📝 Amazon Review Sentiment Analysis
 
-📚 Table of Contents
-Project Overview
-Dataset
-Key Steps
-Results
-Insights
-📘 Project Overview
-This project analyzes user-written Amazon reviews using NLP and machine learning.
-It involves text cleaning, feature extraction using TF-IDF, and model building for rating prediction (1–5).
+A Machine Learning and Natural Language Processing (NLP) project that analyzes Amazon product reviews and predicts review ratings (1–5 stars) based on textual content. The project applies text preprocessing, TF-IDF feature extraction, and multiple classification algorithms to evaluate sentiment prediction performance.
 
-📂 Dataset
-The dataset consists of Amazon product reviews, with each entry containing:
+---
 
-ProductId: Product's unique ID
-UserId: Reviewer’s ID
-ProfileName: Reviewer’s name
-HelpfulnessNumerator/Denominator: Helpfulness vote stats
-Score: Rating (1 to 5)
-Time: Review timestamp
-ReviewSummary: Short summary
-ReviewText: Full review content
-📦 Sample file provided:
+## 📖 Project Overview
 
-txt_reviews.zip: Sample raw review files
-🔑 Key Steps
-🔸 1. Data Extraction
-Extract .txt reviews from ZIP
-Load into a Pandas DataFrame
-🔸 2. Preprocessing
-Calculate helpfulness ratio
-Convert Unix timestamp to datetime
-Clean & tokenize reviews
-Remove stopwords and lemmatize text
-🔸 3. EDA (Exploratory Data Analysis)
-Score distribution plots
-Helpfulness rating visualizations
-🔸 4. Text Vectorization
-Apply TF-IDF to convert text into numerical vectors
-🔸 5. Model Training
-Trained and evaluated multiple classifiers:
+This project focuses on analyzing user-written Amazon product reviews using **Natural Language Processing (NLP)** and **Machine Learning** techniques. The workflow includes data preprocessing, feature engineering, exploratory data analysis, and model training to classify review scores accurately.
 
-Logistic Regression
-Multinomial Naive Bayes
-Gradient Boosting
-Support Vector Machine (SVM)
-Random Forest
-📊 Results
-Model	Accuracy
-Logistic Regression	71.59% ✅
-SVM	71.53%
-Random Forest	70.23%
-Gradient Boosting	67.55%
-Multinomial Naive Bayes	65.74%
-✅ Logistic Regression performed best among the models.
+---
 
-💡 Insights
-Text data preprocessing significantly impacts model performance.
-TF-IDF was effective for this task over raw tokens.
-Logistic Regression and SVM gave close accuracy, but Logistic Regression had a slight edge.
-Gradient Boosting underperformed possibly due to high feature dimensionality.
+## 📂 Dataset
+
+The dataset contains Amazon product reviews with the following attributes:
+
+| Feature | Description |
+|---------|-------------|
+| **ProductId** | Unique product identifier |
+| **UserId** | Reviewer identifier |
+| **ProfileName** | Reviewer's name |
+| **HelpfulnessNumerator** | Helpful votes received |
+| **HelpfulnessDenominator** | Total helpfulness votes |
+| **Score** | Product rating (1–5) |
+| **Time** | Review timestamp |
+| **ReviewSummary** | Short review summary |
+| **ReviewText** | Complete review text |
+
+### 📦 Sample Data
+
+- `txt_reviews.zip` – Sample raw Amazon review files
+
+---
+
+## 🚀 Project Workflow
+
+### 1️⃣ Data Extraction
+- Extract review files from ZIP archive
+- Load reviews into a Pandas DataFrame
+
+### 2️⃣ Data Preprocessing
+- Calculate helpfulness ratio
+- Convert Unix timestamps into readable dates
+- Clean review text
+- Tokenize sentences
+- Remove stopwords
+- Perform lemmatization
+
+### 3️⃣ Exploratory Data Analysis (EDA)
+- Rating distribution analysis
+- Helpfulness score visualization
+- Review length analysis
+- Statistical summaries
+
+### 4️⃣ Feature Engineering
+- Convert textual reviews into numerical vectors using **TF-IDF Vectorization**
+
+### 5️⃣ Model Training
+The following Machine Learning models were trained and evaluated:
+
+- Logistic Regression
+- Support Vector Machine (SVM)
+- Random Forest
+- Gradient Boosting
+- Multinomial Naive Bayes
+
+---
+
+## 📊 Model Performance
+
+| Model | Accuracy |
+|--------|----------|
+| ✅ Logistic Regression | **71.59%** |
+| Support Vector Machine (SVM) | **71.53%** |
+| Random Forest | **70.23%** |
+| Gradient Boosting | **67.55%** |
+| Multinomial Naive Bayes | **65.74%** |
+
+🏆 **Best Performing Model:** Logistic Regression
+
+---
+
+## 💡 Key Insights
+
+- Proper text preprocessing significantly improves prediction accuracy.
+- TF-IDF feature extraction performs effectively for sentiment classification.
+- Logistic Regression achieved the highest accuracy among all evaluated models.
+- SVM delivered comparable performance with only a marginal difference.
+- Random Forest provided competitive results but slightly lower accuracy.
+- Gradient Boosting struggled with the high-dimensional sparse feature space.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- NLTK
+- Scikit-learn
+- Matplotlib
+- Seaborn
+
+---
+
+## 📈 Future Improvements
+
+- Deep Learning models (LSTM, Bi-LSTM)
+- Transformer-based models (BERT, RoBERTa)
+- Hyperparameter tuning
+- Class imbalance handling
+- Deployment using Streamlit or Flask
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates how **Natural Language Processing (NLP)** and **Machine Learning** can be combined to analyze customer reviews and predict product ratings effectively. Among all evaluated models, **Logistic Regression** achieved the highest accuracy, making it the most suitable baseline model for this dataset.
